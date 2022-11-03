@@ -6,6 +6,7 @@
     background: url(../img/background2.jpg) center / cover no-repeat;
     height: 550px;
     position: relative;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
 }
 
 .header-top {
@@ -64,11 +65,11 @@
 
 /* Header Middle */
 
-.header__middle {
+.header__navbar {
     margin: 0 -16px;
 }
 
-.header__middle-button {
+.header__navbar-button {
     --height: 40px;
     color: var(--white-color);
     font-size: 1.6rem;
@@ -82,15 +83,15 @@
     text-shadow: 2px 2px 5px var(--black-color);
 }
 
-.main-header--fixed .header__middle-normal {
+.main-header--fixed .header__navbar-normal {
     display: none;
 }
 
-.main-header--fixed .header__middle-button {
+.main-header--fixed .header__navbar-button {
     color: var(--text-color);
 }
 
-.main-header--fixed .header__middle-fixed {
+.main-header--fixed .header__navbar-fixed {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,22 +102,22 @@
     box-shadow: 0px 1px 2px rgb(0 0 0 / 8%);
 }
 
-.header__middle-fixed {
+.header__navbar-fixed {
     display: none;
 }
 
-.header__middle-fixed:hover {
+.header__navbar-fixed:hover {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 12%);
     cursor: pointer;
 }
 
-.main-header--fixed .header__middle-fixed-text {
+.main-header--fixed .header__navbar-fixed-text {
     color: var(--text-color);
     font-size: 1.4rem;
     font-weight: 500;
 }
 
-.main-header--fixed .header__middle-fixed-btn {
+.main-header--fixed .header__navbar-fixed-btn {
     --size: 32px;
     font-size: 1.2rem;
     background-color: var(--red-color);
@@ -127,16 +128,16 @@
     border-radius: 50%;
 }
 
-.header__middle-item:hover {
+.header__navbar-item:hover {
     opacity: 0.9;
 }
 
-.main-header--fixed .header__middle-item::after,
-.main-header--fixed .header__middle-button::before {
+.main-header--fixed .header__navbar-item::after,
+.main-header--fixed .header__navbar-button::before {
     background-color: var(--text-color);
 }
 
-.header__middle-item::after {
+.header__navbar-item::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -148,11 +149,11 @@
     display: none;
 }
 
-.header__middle-item:hover::after {
+.header__navbar-item:hover::after {
     display: block;
 }
 
-.header__middle-button::before {
+.header__navbar-button::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -164,14 +165,14 @@
     display: none;
 }
 
-#tab1:checked + .header__middle-button::before ,
-#tab2:checked + .header__middle-button::before { 
+#tab1:checked + .header__navbar-button::before ,
+#tab2:checked + .header__navbar-button::before { 
     display: block;
 }
 
 /* Header Right */
 
-.header__right-item {
+.header__weblang-item {
     height: 42px;
     background-color: transparent;
     color: var(--white-color);
@@ -179,15 +180,15 @@
     padding: 0 12px;
 }
 
-.main-header--fixed .header__right-user {
+.main-header--fixed .header__weblang-menu {
     border: 1px solid #DDD;
 }
 
-.main-header--fixed .header__right-user:hover {
+.main-header--fixed .header__weblang-menu:hover {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 18%)
 }
 
-.header__right-user {
+.header__weblang-menu {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -197,19 +198,20 @@
     cursor: pointer;
 }
 
-.header__right-menu-icon {
+.header__weblang-menu-icon {
     font-size: 1.4rem;
     color: var(--text-color);
     margin-right: 12px;
 }
 
-.header__right-user-icon {
+.header__weblang-globe-icon {
     font-size: 2.6rem;
     color: #021630;
     opacity: 0.8;
 }
 
-.header__right-user-sub {
+.header__search-result,
+.header__weblang-sub {
     position: absolute;
     top: 85%;
     right: 0;
@@ -218,10 +220,17 @@
     border-radius: 12px;
     box-shadow: rgb(0 0 0 / 16%) 0px 6px 16px;
     padding: 12px 0;
-    z-index: 1000;
     transition: opacity 0.2s ease-in-out;
     display: none;
     animation: fadeIn ease-in-out 0.2s;
+    z-index: 1000;
+}
+
+.header__search-result {
+    left: 0;
+    top: 70%;
+    z-index: 3;
+    padding-top: 30px;
 }
 
 @keyframes fadeIn {
@@ -233,9 +242,10 @@
     }
 }
 
-.header__right-user-sub-button {
+.header__search-result-suggest,
+.header__weblang-sub-button {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 300;
     padding: 10px 16px;
     width: 100%;
@@ -243,19 +253,29 @@
     color: var(--text-color);
 }
 
-.header__right-user-sub-button:hover {
+.header__weblang-sub-button:hover {
     color: #888;
     cursor: pointer;
 }
 
-.header__right-user-sub-account input:checked + label {
+.header__search-result-suggest {
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.header__search-result-suggest:hover {
+    background-color: var(--gray-color);
+    cursor: pointer;
+}
+
+.header__weblang-sub-list input:checked + label {
     background-color: var(--red-color);
     color: var(--white-color);
   }
 
 /* Header Search  */
 
-.header__search {
+.header__dictlang {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -269,12 +289,12 @@
     z-index: 9;
 }
 
-.main-header--fixed .header__search {
+.main-header--fixed .header__dictlang {
     border: 1px solid #DDD;
     display: none;
 }
 
-.header__search-item {
+.header__dictlang-item {
     border-radius: 32px;
     /* background-color: var(--white-color); */
     height: 100%;
@@ -287,19 +307,19 @@
     flex: 1;
 }
 
-.header__search-item:hover {
+.header__dictlang-item:hover {
     background-color: #ebebeb;
     cursor: pointer;
 }
 
-.header__search-item-title {
+.header__dictlang-item-title {
     color: var(--text-color);
     font-size: 2.4rem;
     font-weight: 600;
     text-align: center;
 }
 
-.header__search-btn {
+.header__dictlang-btn {
     --height: 44px;
     border-radius: 50%;
     background-color: var(--red-color);
@@ -308,20 +328,20 @@
     padding: 0 14px;
 }
 
-/* .header__search-btn--full {
+/* .header__dictlang-btn--full {
     border-radius: 30px;
 }
 
-.header__search-btn--full .header__search-btn-text {
+.header__dictlang-btn--full .header__dictlang-btn-text {
     display: inline-block;
 } */
 
-.header__search-btn:hover {
+.header__dictlang-btn:hover {
     background-color: var(--red-color);
     cursor: pointer;
 }
 
-.header__search-btn-icon {
+.header__dictlang-btn-icon {
     font-size: 1.6rem;
     position: relative;
     top: 2px;
@@ -329,7 +349,7 @@
 
 /* Header Content */
 
-.header__content {
+.header__search {
     position: absolute;
     bottom: 250px;
     left: 50%;
@@ -339,12 +359,12 @@
     z-index: 0;
 }
 
-.header__content__text {
+.header__search__text {
     font-size: 2.4rem;
     text-shadow: 2px 2px 8px var(--black-color);
 }
 
-.header__content__btn {
+.header__search__btn {
     display: inline-block;
     font-size: 1.4rem;
     font-weight: 200;
@@ -357,13 +377,22 @@
     color: var(--text-color);
     min-width: 400px;
     text-align: left;
+    position: relative;
+    z-index: 1000;
 }
 
-.header__content__btn:hover {
+.header__search__btn:hover {
     box-shadow: 0px 6px 20px rgb(0 0 0 / 16%);
 }
 
+.header__search__btn-icon {
+    padding-right: 8px;
+    opacity: 0.7;
+}
 
+.header__search__btn-text{
+    font-size: 1.6rem;
+}
 /* Mobile */
 
 .header-mobile {
