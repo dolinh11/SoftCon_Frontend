@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <title>Softcon Demo</title>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="wide">
+                <div class="main-header">
+                    <div class="header__logo">
+                        <img src="./assets/img/logo_vinuni_white.png" alt="" class="header_logo-img">
+                        <p class="header_logo-name">Softcon</p>   
+                    </div>
+                    
+                    <!-- Cần sửa thêm -->
+                    <div class="header__middle">
+    
+                        <div class="header__middle-normal">
+                            <input type="radio" hidden checked id="tab1" name="selection">
+                            <label for="tab1" class="header__middle-item header__middle-button">SEARCHING</label>
+                            <input type="radio" hidden  id="tab2" name="selection">
+                            <label for="tab2" class="header__middle-item header__middle-button">HISTORY</label>         
+                        </div>
+
+                        <div class="header__middle-fixed">
+                            <span class="header__middle-fixed-text">Bắt đầu tìm kiếm</span>
+                            <div class="header__middle-fixed-btn">
+                                <i class="header__middle-fixed-btn-icon fas fa-search"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+        
+                    <div class="header__right">
+
+                        <div class="header__right-item header__right-user">
+                            <i class="header__right-menu-icon fas fa-bars"></i>
+                            <i class="header__right-user-icon fas fa-globe"></i>
+                        </div>
+                      
+                        <!-- Về sau cần đổi class thành Language -->
+                        <div class="header__right-user-sub">
+                            <div class="header__right-user-sub-account">
+                                <input type="radio" hidden checked id="lang1" name="selection">
+                                <label for="lang1" class="header__right-user-sub-button">English</label>
+                                <input type="radio" hidden id="lang2" name="selection">
+                                <label for="lang2" class="header__right-user-sub-button">Vietnamese</label> 
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="header__search">
+                        <div class="header__search-check-out header__search-item">
+                            <h6 class="header__search-item-title">English</h6>
+                        </div>
+                        
+                        <!-- Đổi tên icon -->
+                        <div class="header__search-btn">
+                            <!-- <i class="header__search-btn-icon fas fa-search"></i> -->
+                            <i class="header__search-btn-icon fas fa-right-left"></i>
+                            <!-- <span class="header__search-btn-text">Tìm kiếm</span> -->
+                        </div>
+
+                        <div class="header__search-check-out header__search-item">
+                            <h6 class="header__search-item-title">Vietnamese</h6>
+                        </div>  
+                    </div>
+                </div>               
+            </div>
+        </div>
+
+        <div class="header__content">
+            <h3 class="header__content__text">Start your search!</h5>
+            <div class="header__content__btn">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Enter your words">
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="header-mobile-btn">
+                <div class="header-mobile-btn-content">
+                    <i class="fas fa-search"></i>
+                    Bạn sắp đi đâu?
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    </div>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
