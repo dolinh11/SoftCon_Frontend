@@ -10,22 +10,24 @@
     --text-color: #222;
     --border-radius: 32px;
     --sub-header: 80px;
-    --red-color : #ff385c;
     --black-color:#000;
+    --red-vinuni-color: #C92127;
+    --blue-vinuni-color: #17234f;
 }
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
+    color: var(--blue-vinuni-color);
 }
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--blue-vinuni-color);
 }
 
 input,
@@ -94,6 +96,7 @@ ul {
     flex-basis: calc(100% / var(--col-number));
     padding: var(--space-col);
     flex-shrink: 0;
+    padding: 24px;
 }
 
 body.disabled-scroll {
