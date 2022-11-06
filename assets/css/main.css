@@ -18,7 +18,7 @@
 
 .header-top.main-header--fixed {
     --padding-bottom: 0px;
-    background-color: var(--white-color);
+    background-color: var(--blue-vinuni-color);
     box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px;
 }
 
@@ -40,10 +40,6 @@
 }
 
 /* LOGO */
-.main-header--fixed .header__logo-link {
-    color: var(--red-vinuni-color);
-}
-
 .header__logo {
     width: 140px;
     height: 32px; 
@@ -69,9 +65,8 @@
     margin: 0 -16px;
 }
 
-.header__navbar-button {
+.header__navbar-item {
     --height: 40px;
-    color: var(--white-color);
     font-size: 1.6rem;
     background-color: transparent;
     height: var(--height);
@@ -81,95 +76,35 @@
     display: inline-block;
     cursor: pointer;
     text-shadow: 2px 2px 5px var(--black-color);
+    text-decoration: none;
+    color: var(--white-color);
 }
 
 .main-header--fixed .header__navbar-normal {
     display: none;
 }
 
-.main-header--fixed .header__navbar-button {
-    color: var(--blue-vinuni-color);
-}
-
+.header__navbar-normal,
 .main-header--fixed .header__navbar-fixed {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     min-width: 300px;
-    border: 1px solid #DDD;
-    padding: 8px 16px;
-    border-radius: 40px;
     box-shadow: 0px 1px 2px rgb(0 0 0 / 8%);
+    justify-content: space-between;
 }
 
 .header__navbar-fixed {
     display: none;
 }
 
-.header__navbar-fixed:hover {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 12%);
-    cursor: pointer;
-}
-
-.main-header--fixed .header__navbar-fixed-text {
-    color: var(--blue-vinuni-color);
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.main-header--fixed .header__navbar-fixed-btn {
-    --size: 32px;
-    font-size: 1.2rem;
-    background-color: var(--red-vinuni-color);
-    width: var(--size);
-    height: var(--size);
-    line-height: var(--size);
-    text-align: center;
-    border-radius: 50%;
-}
-
 .header__navbar-item:hover {
-    opacity: 0.9;
+    cursor: pointer;
+    border-bottom: 2px solid var(--red-vinuni-color);
 }
 
-.main-header--fixed .header__navbar-item::after,
-.main-header--fixed .header__navbar-button::before {
-    background-color: var(--blue-vinuni-color);
+.main-header--fixed .header__navbar-fixed .header__navbar-item:hover {
+    text-decoration: none;
+    color: var(--white-color);
 }
-
-.header__navbar-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 2px;
-    background-color: var(--red-vinuni-color);
-    display: none;
-}
-
-.header__navbar-item:hover::after {
-    display: block;
-}
-
-.header__navbar-button::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background-color: var(--red-vinuni-color);
-    display: none;
-}
-
-#tab1:checked + .header__navbar-button::before ,
-#tab2:checked + .header__navbar-button::before { 
-    display: block;
-}
-
 /* Header Right */
 
 .header__weblang-item {
@@ -266,14 +201,16 @@
 .header__search-result-suggest:hover {
     background-color: var(--gray-color);
     cursor: pointer;
+    text-decoration: none;
+    color: var(--red-vinuni-color);
 }
 
 .header__weblang-sub-list input:checked + label {
     background-color: var(--red-vinuni-color);
     color: var(--white-color);
-  }
+}
 
-/* Header Search  */
+/* Header Dictionary Language  */
 
 .header__dictlang {
     position: absolute;
@@ -317,6 +254,7 @@
     font-size: 2.4rem;
     font-weight: 600;
     text-align: center;
+    margin: 0;
 }
 
 .header__dictlang-btn {
@@ -400,6 +338,10 @@
 }
 
 /* Section Search Result */
+
+.section-search-result {
+    display: none;
+}
 
 .result-item{
     padding-top: 24px;
@@ -653,6 +595,18 @@
     text-align: center;
     letter-spacing: 2px;
     font-size: 1.4rem;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    display: none;
 }
 
 

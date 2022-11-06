@@ -1,12 +1,12 @@
 /* Display Web Language */
 
-const userSub = document.querySelector('.header__weblang-sub');
-const user = document.querySelector('.header__weblang-menu');
-user.onclick = function () {
-    if (userSub.classList.contains('display')) {
-        userSub.classList.remove('display');
+const weblang = document.querySelector('.header__weblang-sub');
+const menu = document.querySelector('.header__weblang-menu');
+menu.onclick = function () {
+    if (weblang.classList.contains('display')) {
+        weblang.classList.remove('display');
     } else {
-        userSub.classList.add('display');
+        weblang.classList.add('display');
     }
 }
 
@@ -18,16 +18,29 @@ function SwapDivsWithClick() {
     });
 }
 
-/* Display Search Result */
+/* Display Suggestion Result */
 
-const searchResult = document.querySelector('.header__search-result');
+const searchSuggest = document.querySelector('.header__search-result');
 const searchBtn = document.querySelector('.header__search__btn');
 searchBtn.onclick = function () {
-    if (searchResult.classList.contains('display')) {
-        searchResult.classList.remove('display');
+    if (searchSuggest.classList.contains('display')) {
+        searchSuggest.classList.remove('display');
     } else {
-        searchResult.classList.add('display');
+        searchSuggest.classList.add('display');
     }
+}
+
+/* Display Search Result */
+
+const searchResult = document.querySelector('.section-search-result');
+const suggestTerm = document.querySelector('.header__search-result');
+suggestTerm.onclick = function () {
+    // if (searchResult.classList.contains('display')) {
+    //     searchResult.classList.remove('display');
+    // } else {
+    //     searchResult.classList.add('display');
+    // }
+    searchResult.classList.add('display');
 }
 
 /*Expan Word Meaning*/
@@ -39,5 +52,30 @@ expandBtn.onclick = function () {
         meaning.classList.remove('display');
     } else {
         meaning.classList.add('display');
+    }
+}
+
+/**-----------------------Header fixed---------------------- */
+let headerTop = document.querySelector('.header-top');
+
+window.onscroll = function () {
+    if (window.scrollY > 0) {
+        headerTop.classList.add('main-header--fixed');
+        headerMainFixed = document.querySelector('.main-header--fixed');
+        /**-------------Header Mobile--------------- */
+        if (!headerMobile.classList.contains('header-mobile--background')) {
+            headerMobile.classList.add('header-mobile--background')
+        }
+    } else {
+        if (headerTop.classList.contains('main-header--fixed')) {
+            headerTop.classList.remove('main-header--fixed');
+            hideHeaderFixed();
+        }
+        
+        /**-------------Header Mobile--------------- */
+
+        if (headerMobile.classList.contains('header-mobile--background')) {
+            headerMobile.classList.remove('header-mobile--background')
+        }
     }
 }
