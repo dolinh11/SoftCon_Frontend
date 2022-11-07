@@ -27,13 +27,8 @@
                     <!-- Cần sửa thêm -->
                     <div class="header__navbar">
                         <div class="header__navbar-normal">
-                            <a class="header__navbar-item">SEARCHING</a>
-                            <a class="header__navbar-item">HISTORY</a>         
-                        </div>
-
-                        <div class="header__navbar-fixed">
-                            <a href="#searching" class="header__navbar-item">SEARCHING</a>
-                            <a class="header__navbar-item">HISTORY</a>        
+                            <a href = "#searching" class="header__navbar-item border-choosen">MEDICAL DICTIONARY</a>
+                            <!-- <a class="header__navbar-item">HISTORY</a>          -->
                         </div>
                     </div>
         
@@ -46,28 +41,32 @@
                         <div class="header__weblang-sub">
                             <div class="header__weblang-sub-list">
                                 <input type="radio" hidden checked id="lang1" name="selection">
-                                <label for="lang1" class="header__weblang-sub-button">English</label>
+                                <label for="lang1" class="header__weblang-sub-button">
+                                    <a href="index_en.html">English</a>
+                                </label>
                                 <input type="radio" hidden id="lang2" name="selection">
-                                <label for="lang2" class="header__weblang-sub-button">Vietnamese</label> 
+                                <label for="lang2" class="header__weblang-sub-button">
+                                    <a href="index_vn.html">Vietnamese</a>
+                                </label> 
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="header__dictlang">
-                        <div class="header__dictlang-item" id="header__dictlang-en">
-                            <h6 class="header__dictlang-item-title">English</h6>
-                        </div>
-
-                        <div class="header__dictlang-item" id="header__dictlang-vn">
-                            <h6 class="header__dictlang-item-title">Vietnamese</h6>
-                        </div> 
-                        
-                        <a class="header__dictlang-btn" href="javascript:SwapDivsWithClick()">
-                            <i class="header__dictlang-btn-icon fas fa-right-left"></i>
-                        </a>
-                    </div>
-                </div>               
+                    </div>       
+                </div>       
             </div>
+        </div>
+
+        <div class="header__dictlang">
+            <div class="header__dictlang-item" id="header__dictlang-en">
+                <h6 class="header__dictlang-item-title">English</h6>
+            </div>
+
+            <div class="header__dictlang-item" id="header__dictlang-vn">
+                <h6 class="header__dictlang-item-title">Vietnamese</h6>
+            </div> 
+            
+            <a class="header__dictlang-btn" href="javascript:SwapDivsWithClick()">
+                <i class="header__dictlang-btn-icon fas fa-right-left"></i>
+            </a>
         </div>
 
         <div class="header__search">
@@ -96,16 +95,6 @@
                 </a>
             </div>
         </div>
-
-        <div class="header-mobile">
-            <div class="header-mobile-btn">
-                <div class="header-mobile-btn-content">
-                    <i class="fas fa-search"></i>
-                    Start your search
-                </div>
-            </div>
-        </div>
-
     </header>
 
     <section class="section-item section-search-result">
@@ -139,7 +128,7 @@
         </div>
     </section>
 
-    <section class="section-item section-history">
+    <!-- <section class="section-item section-history">
         <div class="wide">
             <h2 class="section-item__heading">Recent searched terms</h2>
             <div class="row section-history__row">
@@ -301,10 +290,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer-bot">
-        <div class="footer-info">
+        <!-- <div class="footer-info">
             <div class="footer-connection">
                 <h3>Kết nối </h3>
                 <a class="github footer-social-icon" id="icon-github" href="#">
@@ -324,20 +313,28 @@
                 </form>
             </div>
             <div class="clearfix"> </div>
-        </div>
+        </div> -->
         <div class="footer-navbar">
             <div class="col-xs-9 footer-navbar-menu">
                 <ul>
                     <li>
-                        <a href="#searching">SEARCHING</a>
+                        <a href="#searching">Back to the top</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#history">HISTORY</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
-            <div class="clearfix"></div>
+<!-- <div class="clearfix"></div> -->
             <div class="copy-right">
+                <div class="footer-connection">
+                    <a class="github footer-social-icon" id="icon-github" href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a class="email footer-social-icon" href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
                 <p>
                     &copy; 2022 SoftCon.
                 </p>
