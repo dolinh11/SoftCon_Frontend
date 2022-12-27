@@ -403,9 +403,16 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 48px;
+    margin-bottom: 0 !important;
     display: none;
     animation: fadeIn 1s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+.result-img .display {
+    animation: fadeOut 1s;
+}
+
 
 /* Section Search Result */
 

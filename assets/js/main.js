@@ -74,8 +74,10 @@ function removeSearchResult() {
 function showImg() {
     if (img.classList.contains('display')) {
         img.classList.remove('display');
+        imgBtn.innerHTML = "Display Image";
     } else {
         img.classList.add('display');
+        imgBtn.innerHTML = "Hide Image";
     }
 }
 
