@@ -64,9 +64,19 @@ const suggestTerm = document.querySelectorAll('.header__search-result-suggest')
 const modal = document.querySelector('.modal_result')
 const modalClose = document.querySelector(".modal_result-close")
 const modalContainer = document.querySelector(".modal_result-container")
+const img = document.querySelector('.result-img');
+const imgBtn = document.querySelector('.result-img-btn');
 
 function removeSearchResult() {
     modal.classList.remove('open');
+}
+
+function showImg() {
+    if (img.classList.contains('display')) {
+        img.classList.remove('display');
+    } else {
+        img.classList.add('display');
+    }
 }
 
 for (const term of suggestTerm) {
@@ -79,6 +89,7 @@ function showSearchResult() {
     mobileSuggest.classList.remove('display');
 }
 
+imgBtn.addEventListener('click', showImg)
 modalClose.addEventListener('click', removeSearchResult)
 modal.addEventListener('click', removeSearchResult)
 modalContainer.addEventListener('click', function (event) {
