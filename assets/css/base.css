@@ -122,3 +122,7 @@ body.disabled-scroll {
 .invisible {
     visibility: none;
 }
+
+.hide {
+    display: none;
+}

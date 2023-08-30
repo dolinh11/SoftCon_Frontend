@@ -180,6 +180,49 @@
     </section>
 <!-- Hết phần login -->
 
+<!-- Thêm phần thêm từ cho admin/users -->
+    <section class="add-term_section hide">
+        <div class="reg_form right-panel-active" id="reg_form">
+            <div class="form-container sign-up-container">
+                <form class="form-content" action="#">
+                    <h1 class="form-title text-red">Add/Edit Term</h1>
+                    <input class="form-input" type="text" placeholder="English Term" />
+                    <input class="form-input" type="text" placeholder="Vietnamese Term" />
+                    <input class="form-input" type="text" placeholder="Word Type" />
+                    <a href="" class="form-button signUp form-submit">Submit</a>
+                    <p class="signIn-mobile invisible">Already have an account? Log In</p>
+                </form>
+            </div>
+            <div class="form-container sign-in-container invisible">
+                <form class="form-content" action="#">
+                    <h1 class="form-title">Sign in</h1>
+                    <input class="form-input" type="email" placeholder="Email" />
+                    <input class="form-input" type="password" placeholder="Password" />
+                    <a class="form-href" href="#">Forgot your password?</a>
+                    <a href="" class="form-button signIn">Sign In</a>
+                    <p class="signUp-mobile">Create an account</p>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="form-overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1 class="form-title">We appreciate your valuable contribution!</h1>
+                        <p class="form-text">Kindly submit a new term or suggest edits to an existing term</p>
+                        <button class="form-button ghost invisible" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right invisible">
+                        <h1 class="form-title">Hello, Friend!</h1>
+                        <p class="form-text">Enter your personal details and start journey with us</p>
+                        <button class="form-button ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hết phần thêm từ -->
+
+
+
     <header class="header" id="searching">
         <div class="header-top">
             <div class="wide">
@@ -219,6 +262,19 @@
                         <!-- Thêm nút login -->
                         <div class="header__weblang-item header__weblang-user">
                             <i class="header__weblang-user-icon fa-solid fa-user-lock"></i>
+
+                            <div class="header__user-sub reg_section invisible">
+                                <div class="header__user-sub-list">
+                                    <span class="header__user-sub-button">
+                                        <i class="header-user-icon fa-solid fa-circle-user"></i>
+                                        <a href="#" class="text-red">Admin Name</a>
+                                    </span>
+                                    <span class="header__user-sub-button header_user-add-button baseline">
+                                        <i class="header_user-add-icon fa-solid fa-file-circle-plus"></i>
+                                        <a href="#">Add new medical term</a>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <!--  -->                        
                     </div>       
@@ -565,6 +621,9 @@
             </header>
 
             <section class="section-item section-search-result">
+                <div class="text-center result-edit-btn hide">
+                    Edit Term
+                </div>
                 <div class="text-center result-img-btn">
                     Hình ảnh
                 </div>
