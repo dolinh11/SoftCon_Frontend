@@ -7,6 +7,7 @@ menu.onclick = function () {
         weblang.classList.remove('display');
     } else {
         weblang.classList.add('display');
+        regSection.classList.remove('display');
     }
 }
 
@@ -64,22 +65,22 @@ const suggestTerm = document.querySelectorAll('.header__search-result-suggest')
 const modal = document.querySelector('.modal_result')
 const modalClose = document.querySelector(".modal_result-close")
 const modalContainer = document.querySelector(".modal_result-container")
-const img = document.querySelector('.result-img');
-const imgBtn = document.querySelector('.result-img-btn');
+// const img = document.querySelector('.result-img');
+// const imgBtn = document.querySelector('.result-img-btn');
 
 function removeSearchResult() {
     modal.classList.remove('open');
 }
 
-function showImg() {
-    if (img.classList.contains('display')) {
-        img.classList.remove('display');
-        imgBtn.innerHTML = "Display Image";
-    } else {
-        img.classList.add('display');
-        imgBtn.innerHTML = "Hide Image";
-    }
-}
+// function showImg() {
+//     if (img.classList.contains('display')) {
+//         img.classList.remove('display');
+//         imgBtn.innerHTML = "Display Image";
+//     } else {
+//         img.classList.add('display');
+//         imgBtn.innerHTML = "Hide Image";
+//     }
+// }
 
 for (const term of suggestTerm) {
     term.addEventListener('click', showSearchResult);
@@ -91,7 +92,7 @@ function showSearchResult() {
     mobileSuggest.classList.remove('display');
 }
 
-imgBtn.addEventListener('click', showImg)
+// imgBtn.addEventListener('click', showImg)
 modalClose.addEventListener('click', removeSearchResult)
 modal.addEventListener('click', removeSearchResult)
 modalContainer.addEventListener('click', function (event) {
@@ -100,12 +101,93 @@ modalContainer.addEventListener('click', function (event) {
 
 /*Expan Word Meaning*/
 
-const meaning = document.querySelector('.history-item-meaning');
-const expandBtn = document.querySelector('.history-item-expand');
-expandBtn.onclick = function () {
-    if (meaning.classList.contains('display')) {
-        meaning.classList.remove('display');
+// const meaning = document.querySelector('.history-item-meaning');
+// const expandBtn = document.querySelector('.history-item-expand');
+// expandBtn.onclick = function () {
+//     if (meaning.classList.contains('display')) {
+//         meaning.classList.remove('display');
+//     } else {
+//         meaning.classList.add('display');
+//     }
+// }
+
+/*Registration Form*/
+const regButton = document.querySelector('.header__weblang-user');
+const regSection = document.querySelector('.reg_section')
+const regModal = document.querySelector('.reg_form')
+const signUpButton = document.querySelector('#signUp');
+const signInButton = document.querySelector('#signIn');
+const signUpButtonMB = document.querySelector('.signUp-mobile');
+const signInButtonMB = document.querySelector('.signIn-mobile');
+
+regButton.onclick = function () {
+    if (regSection.classList.contains('display')) {
+        regSection.classList.remove('display');
     } else {
-        meaning.classList.add('display');
+        regSection.classList.add('display');
+        weblang.classList.remove('display');
     }
 }
+
+regSection.addEventListener('click', (event) => {
+    if (!event.target.closest('.reg_form')) {
+      regSection.classList.remove('display');
+    }
+  });
+
+signUpButton.onclick = function () {
+	regModal.classList.add('right-panel-active');
+}
+
+signInButton.onclick = function () {
+	regModal.classList.remove('right-panel-active');
+}
+
+signUpButtonMB.onclick = function () {
+	regModal.classList.add('right-panel-active');
+}
+
+signInButtonMB.onclick = function () {
+	regModal.classList.remove('right-panel-active');
+}
+
+/* Add/ Edit term*/
+const addSection = document.querySelector('.add-term_section');
+const addButton = document.querySelector('.header_user-add-button');
+const submitButton = document.querySelector('.form-submit')
+
+addButton.onclick = function () {
+    regSection.classList.remove('display');
+	addSection.classList.add('display');
+}
+
+addSection.addEventListener('click', (event) => {
+    if (!event.target.closest('.reg_form')) {
+        addSection.classList.remove('display');
+    }
+});
+
+const editButton = document.querySelector('.result-edit-btn')
+
+editButton.onclick = function () {
+    modal.classList.remove('open');
+	addSection.classList.add('display');
+}
+
+submitButton.onclick = function () {
+	addSection.classList.remove('display');
+}
+
+/* Display Guideline Mobile*/
+const guideMobile = document.querySelector('.guideline_mobile');
+const guideClose = document.querySelector('.modal_guide-close');
+var x = window.matchMedia("(max-width: 739px)")
+if (x.matches) {
+    guideMobile.classList.add('display');
+}
+
+guideClose.onclick = function () {
+    guideMobile.classList.remove('display');
+}
+
+

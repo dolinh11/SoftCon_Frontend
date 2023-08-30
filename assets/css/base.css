@@ -6,12 +6,12 @@
 
 :root {
     --white-color: #fff;
-    --gray-color: #f7f7f7;
+    --gray-color: #eee;
     --text-color: #222;
     --border-radius: 32px;
     --sub-header: 80px;
     --black-color:#000;
-    --red-vinuni-color: rgb(201, 33, 39);
+    --red-vinuni-color: #c92127;
     --blue-vinuni-color: #17234f;
 }
 
@@ -113,4 +113,12 @@ body.disabled-scroll {
 
 .text-white {
     color: var(--white-color);
+}
+
+.text-red {
+    color: var(--red-vinuni-color) !important;
+}
+
+.invisible {
+    visibility: none;
 }

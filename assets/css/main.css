@@ -118,7 +118,6 @@
 .header__weblang-sub {
     position: absolute;
     top: 85%;
-    right: 0;
     min-width: 120px;
     background-color: var(--white-color);
     border-radius: 12px;
@@ -135,6 +134,7 @@
     top: 70%;
     z-index: 3;
     padding-top: 30px;
+    right: 0;
 }
 
 @keyframes fadeIn {

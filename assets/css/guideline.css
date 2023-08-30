@@ -1,0 +1,226 @@
+/* Slider */
+.guideline_mobile {
+    display: none;
+}
+
+.slider_content {
+    color: var(--white-color);
+    position: absolute;
+    padding: 5% 10%; 
+    text-align: left;
+    max-width: 100%;
+}
+
+.slider_content--heading {
+    margin-bottom: 12%;
+    font-weight: 700;
+    font-size: 4.0rem;
+}
+
+.slider_content--description li {
+    margin: 15px 0;
+    font-size: 2.0rem;
+}
+
+.slider_arrow {
+    width: 7%;
+}
+
+.slider_arrow--left, .slider_arrow--right, .slider_arrow--down {
+    font-size: 2.8rem;
+}
+
+.info_nav {
+    background-color: var(--blue-vinuni-color);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.info_nav a{
+    font-size: 2.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.slider_arrow--down {
+    word-wrap: break-word;
+    color: var(--white-color);
+    opacity: 0.6;
+}
+
+.info_nav:hover a{
+    opacity: 1;
+}
+
+.info_nav:hover .slider_arrow--down{
+    opacity: 1;
+}
+
+
+    /* Modal Search Result */
+
+    .guideline_mobile {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.4);
+        align-items: center;
+        justify-content: center;
+        /* display: none; */
+        z-index: 100;
+    }
+
+    .guideline_mobile.open {
+        display: flex;
+    }
+
+    .modal_guide-container {
+        background-color: var(--white-color);
+        max-height: 90vh;
+        position: relative;
+        border-radius: 12px;
+        animation: modalFadeIn ease 0.5s;
+        margin-left: 16px;
+        margin-right: 16px;
+        height: auto;
+        top: 10%;
+    }
+
+    .modal_guide-header {
+        background-color: var(--blue-vinuni-color);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.0vh;
+        color: var(--white-color);
+        letter-spacing: 4px;
+        border-radius: 12px;
+    }
+
+    .modal_guide-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: var(--white-color);
+        padding: 0 6px;
+        cursor: pointer;
+        opacity: 0.8;
+        font-size: 2.4rem;
+    }
+
+    .modal_guide-close:hover {
+        opacity: 1;
+    }
+
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Section Search Result */
+
+    .section-guide {
+        /* display: none; */
+        padding-bottom: 32px;
+        height: 65vh;
+        overflow-y: auto;
+    }
+
+    .guide_separation_line {
+        margin: 16px auto 16px;
+        border-bottom: 2px solid var(--red-vinuni-color);
+        display: block;
+        max-width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .guide-item__term-header {
+        margin: 0;
+        padding: 2.4vh;
+    }
+    
+    .guide-item__term-header header {
+        font-size: 2.4vh;
+        color: var(--blue-vinuni-color);
+        display: inline-block;
+        /* font-family: Playfair Display, serif; */
+        font-weight: 500;
+    }
+
+    .guide-item__term-attr {
+        color: var(--blue-vinuni-color);
+        font-size: 1.8vh;
+        margin: auto;
+        padding: 0 2.8vh;
+    }
+
+    .guide-item__term-attr li {
+        padding-bottom: 1.6vh;
+    }
+
+    .guide-item__term-star {
+        font-size: 2.4vh;
+        padding-right: 1.2vh;
+    }
+
+/* Responsive */
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .slider_content--heading {
+        font-weight: 500;
+        font-size: 2.0rem;
+    }
+    
+    .slider_content--description li {
+        font-size: 1.4rem;
+    }
+
+    .slider_content {
+        padding-bottom: 5%;
+    }
+
+    .info_nav a{
+        font-size: 2.0rem;
+    }
+
+    .slider_arrow--left, .slider_arrow--right, .slider_arrow--down {
+        font-size: 2.4rem;
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    #guideline {
+        display: none;
+    }
+}
+
+
+@media (min-height: 200px) and (max-height: 500px){
+    .modal_guide-header {
+      font-size: 4vh;
+      height: 60px;
+    }
+
+    .separation_line {
+        margin: 24px auto 24px;
+    }
+
+    .section-guide {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
